@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "AutoAd_Info",
+    "version": "1.0",
+    "description": "Helps popup more info about selected amazon product name",
+    "icons": {"128": "icon.png" },
+
+    "background": {
+        "scripts": ["background.js","options.js"],
+        "persistent": false
+    },
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "login.html"
+    },
+
+    "content_scripts":[
+        {
+            "matches":[
+                "<all_urls>"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+ 
+    "permissions": [
+        "tabs",
+        "<all_urls>",
+        "contextMenus",
+        "https://autoad-server.netlify.com/.netlify/functions/target"
+    ]
+}
