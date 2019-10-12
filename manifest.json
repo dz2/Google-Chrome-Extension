@@ -7,7 +7,7 @@
 
     "background": {
         "scripts": ["background.js","options.js"],
-        "persistent": false
+        "persistent": true
     },
 
     "browser_action": {

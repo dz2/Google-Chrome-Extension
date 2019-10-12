@@ -12,7 +12,7 @@ chrome.contextMenus.onClicked.addListener(contextMenuHandler);
 function contextMenuHandler(info, tab) {
     if (info.menuItemId == "autoadInfo" && info.selectionText){
         var myid = getID(info.selectionText);
-        alert(myid);
+        //alert(myid);
 
 
         var xhr = new XMLHttpRequest();
